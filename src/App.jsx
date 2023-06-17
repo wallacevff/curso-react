@@ -1,27 +1,63 @@
 import React from "react";
-import Primeiro from "./components/basicos/Primeiro";
-import ComParametro from "./components/basicos/ComParametro";
-import Fragmento from "./components/basicos/Fragmento";
-export default () => 
+import {
+    Primeiro,
+    ComParametro,
+    Fragmento,
+    Aleatorio,
+    Card,
+    Cards
+} from "./importHelper";
+
+export default () =>
 (
     <div id="app">
-        
-        <ComParametro 
-            titulo = "Situação do Aluno"
-            aluno = "Pedro"
-            nota = {9.3}
-        />
-        <ComParametro 
-            titulo = "Situação do Aluno"
-            aluno = "Maria"
-            nota = {5.0}
-        />
-        <ComParametro 
-            titulo = "Situação do Aluno"
-            aluno = "João"
-            nota = {3.0}
-        />
-        <Fragmento />
-        <Primeiro />
+        <Cards>
+            <Card
+                titulo="Desafio Aleatório"
+                color="red"
+            >
+                <Aleatorio
+                    max={10}
+                    min={5}
+                />
+            </Card>
+
+            <Card
+                titulo="Com Parâmetro"
+                color="#ffc300"
+            >
+                <ComParametro
+                    titulo="Situação do Aluno"
+                    aluno="Pedro"
+                    nota={9.3}
+                />
+            </Card>
+
+            <Card
+                titulo="Fragmento"
+                color="purple"
+            >
+                <Fragmento />
+            </Card>
+
+            <Card
+                titulo="Com Parâmetro"
+                color="#8338ec"
+            >
+                <ComParametro
+                    titulo="Situação do Aluno"
+                    aluno="Pedro"
+                    nota={9.3}
+                />
+            </Card>
+
+            <Card
+                titulo="Primeiro"
+                color="#023047"
+            >
+                <Primeiro />
+            </Card>
+
+        </Cards>
     </div>
 );
