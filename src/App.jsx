@@ -10,7 +10,8 @@ import {
     Familia,
     ListaAlunos,
     TabelaProdutos,
-    ParOuImpar
+    ParOuImpar,
+    UsuarioInfo
 } from "./importHelper";
 
 const App = () => {
@@ -22,6 +23,18 @@ const App = () => {
     return (
         <div id="app">
             <Cards>
+                <Card
+                    titulo="#09 - Renderização Condicional"
+                    color="#fca311"
+                    styles={styles.cartao}
+                >
+                    <UsuarioInfo
+                        usuario={{ nome: "Wallace" }}
+                    />
+                    <UsuarioInfo
+                        usuario={{ email: "wall@wallace.com" }}
+                    />
+                </Card>
                 <Card
                     titulo="#08 - Renderização Condicional"
                     color="#b5838d"
