@@ -1,11 +1,16 @@
 .ListaAlunos{
     border: solid;
     border-color: "#000";
-    padding: 10px;
+    /* padding: 10px;  */
     margin-left: 10px;
     margin-right: 10px;
 }
 
+
+.ListaAlunos ul{
+    list-style: none;
+}
+
 .ListaAlunos li{
-    list-style: none
+    list-style: inherit
 }

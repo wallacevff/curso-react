@@ -1,47 +1,47 @@
 const Alunos = [
     {
         id: 1,
-        nomme: "Ana",
+        nome: "Ana",
         nota: 9.2
     },
     {
         id: 2,
-        nomme: "Bia",
+        nome: "Bia",
         nota: 7.6
     },
     {
         id: 3,
-        nomme: "Carlos",
+        nome: "Carlos",
         nota: 8.1
     },
     {
         id: 4,
-        nomme: "Daniel",
+        nome: "Daniel",
         nota: 5.7
     },
     {
         id: 5,
-        nomme: "Gui",
+        nome: "Gui",
         nota: 10
     },
     {
         id: 6,
-        nomme: "Rebeca",
+        nome: "Rebeca",
         nota: 9.5
     },
     {
         id: 7,
-        nomme: "Arthur",
+        nome: "Arthur",
         nota: 7.7
     },
     {
         id: 8,
-        nomme: "Pedro",
+        nome: "Pedro",
         nota: 6.9
     },
     {
         id: 9,
-        nomme: "Gustavo",
+        nome: "Gustavo",
         nota: 8.1
     }
 ];

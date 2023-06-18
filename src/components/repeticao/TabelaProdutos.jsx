@@ -1,20 +1,17 @@
 import React from "react";
 import Produtos from "../../data/Produtos";
-//import "bootstrap/dist/css/bootstrap.min.css";
 import "./TabelaProdutos.css";
 const TabelaProdutos = (props) => {
     const borderColor = {
         borderColor: props.color,
-    }
-    const textAlign = {
-        textAlign: "left",
-        borderColor: props.color,
-        paddingLeft: "10px"
+        color: props.color,
     }
     return (
         <table className="TabelaProdutos"
-            style={{borderColor: props.color,
-                    color: props.color}}
+            style={{
+                borderColor: props.color,
+                color: props.color
+            }}
         >
             <thead>
                 <tr>
@@ -32,16 +29,26 @@ const TabelaProdutos = (props) => {
             <tbody>
                 {
                     Produtos.map(
-                        (produto, i) =>
-                            <tr key={i}>
-                                <td>{produto.id}</td>
-                                <td style={textAlign}>{produto.nome}</td>
-                                <td style={textAlign}>R$ {produto.preco.toFixed(2).replace('.',',')}</td>
-                            </tr>
+                        (produto, i) => {
+                            const style = {
+                                backgroundColor : produto.id % 2 !== 0 ? props.color : "inherit",
+                                color: produto.id % 2 !== 0 ? "#edf2f4" : "inherit",
+                                textAlign: "left",
+                                paddingLeft: "10px"
+                            }
+                            return (
+
+                                <tr key={i} style={style}>
+                                    <td style={{textAlign: "center"}}>{produto.id}</td>
+                                    <td style={style}>{produto.nome}</td>
+                                    <td style={style}>R$ {produto.preco.toFixed(2).replace('.', ',')}</td>
+                                </tr>
+                            )
+                        }
                     )
                 }
             </tbody>
         </table>
-    ); 
+    );
 }
 export default TabelaProdutos;
