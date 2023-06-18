@@ -34,6 +34,10 @@ const App = () => {
                     <UsuarioInfo
                         usuario={{ email: "wall@wallace.com" }}
                     />
+                    <UsuarioInfo
+                        usuario={{ nome: "Frederico" }}
+                    />
+                    <UsuarioInfo />
                 </Card>
                 <Card
                     titulo="#08 - Renderização Condicional"
