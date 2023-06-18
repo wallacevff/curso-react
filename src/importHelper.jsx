@@ -8,6 +8,8 @@ import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import Familia from "./components/basicos/Familia";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
+import ParOuImpar from "./components/condicional/ParOuImpar";
+
 export { Primeiro,
     ComParametro,
     Fragmento,
@@ -17,5 +19,6 @@ export { Primeiro,
     FamiliaMembro,
     Familia,
     ListaAlunos,
-    TabelaProdutos
+    TabelaProdutos,
+    ParOuImpar
 };

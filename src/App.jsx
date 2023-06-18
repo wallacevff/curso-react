@@ -9,7 +9,8 @@ import {
     FamiliaMembro,
     Familia,
     ListaAlunos,
-    TabelaProdutos
+    TabelaProdutos,
+    ParOuImpar
 } from "./importHelper";
 
 const App = () => {
@@ -20,9 +21,23 @@ const App = () => {
     };
     return (
         <div id="app">
-
             <Cards>
-            <Card
+                <Card
+                    titulo="#08 - Renderização Condicional"
+                    color="#b5838d"
+                    styles={styles.cartao}
+                >
+                    <ParOuImpar
+                        numero={20}
+                    />
+                    <ParOuImpar
+                        numero={21}
+                    />
+                    <ParOuImpar
+                        numero={190}
+                    />
+                </Card>
+                <Card
                     titulo="#07 - Tabela Produtos"
                     color="#274472"
                     styles={styles.cartao}
@@ -45,6 +60,7 @@ const App = () => {
                         <FamiliaMembro Nome="Wallace" />
                         <FamiliaMembro Nome="Andressa" />
                         <FamiliaMembro Nome="Rafaela" Sobrenome="Rocha" />
+                        <FamiliaMembro Nome="Ricardo" Sobrenome="Fortuna" />
                     </Familia>
                 </Card>
 
