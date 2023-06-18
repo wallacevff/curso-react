@@ -1,0 +1,14 @@
+.TabelaProdutos {
+    border: 3px solid;
+    width: stretch;
+    border-collapse: collapse;
+}
+
+.TabelaProdutos th {
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+}
+.TabelaProdutos td {
+    border-left: 2px solid;
+    justify-content: left;
+}

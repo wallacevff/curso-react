@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+const Fragmento =  () => {
 
     return (
         <>
@@ -9,3 +9,5 @@ export default () => {
         </>
     );
 }
+
+export default Fragmento;

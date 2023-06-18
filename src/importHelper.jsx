@@ -6,7 +6,8 @@ import Card from "./components/layout/Card";
 import Cards from "./components/layout/Cards";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import Familia from "./components/basicos/Familia";
-
+import ListaAlunos from "./components/repeticao/ListaAlunos";
+import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 export { Primeiro,
     ComParametro,
     Fragmento,
@@ -14,5 +15,7 @@ export { Primeiro,
     Card,
     Cards,
     FamiliaMembro,
-    Familia
+    Familia,
+    ListaAlunos,
+    TabelaProdutos
 };

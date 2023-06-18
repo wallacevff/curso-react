@@ -1,9 +1,11 @@
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import React from "react";
 import "./index.css";
 
 import App from "./App.jsx";
-ReactDOM.render(
+const domNode = document.getElementById("root");
+const root = createRoot(domNode);
+root .render(
     <>
         <h1>
             Fundamentos React
@@ -11,5 +13,5 @@ ReactDOM.render(
         <App />
     </>
     ,
-    document.getElementById('root')
+    
 );

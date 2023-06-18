@@ -7,72 +7,85 @@ import {
     Card,
     Cards,
     FamiliaMembro,
-    Familia
+    Familia,
+    ListaAlunos,
+    TabelaProdutos
 } from "./importHelper";
 
-export default () =>
-(
-    <div id="app">
-        
-        <Cards>
+const App = () => {
+    const styles = {
+        cartao: {
+            height: "fit-content",
+        }
+    };
+    return (
+        <div id="app">
 
-        <Card
-                titulo="Familia"
-                color="#22223b"
-            >
-                <Familia Sobrenome="Vidal">
-                    <FamiliaMembro Nome="Wallace" />
-                    <FamiliaMembro Nome="Andressa" />
-                    <FamiliaMembro Nome="Rafaela" Sobrenome="Rocha"/>
-                </Familia>
-            </Card>
-
+            <Cards>
             <Card
-                titulo="Desafio Aleatório"
-                color="red"
-            >
-                <Aleatorio
-                    max={10}
-                    min={5}
-                />
-            </Card>
+                    titulo="#07 - Tabela Produtos"
+                    color="#274472"
+                    styles={styles.cartao}
+                >
+                    <TabelaProdutos />
+                </Card>
+                <Card
+                    titulo="#06 - Repetção"
+                    color="#adb5bd"
+                    styles={styles.cartao}
+                >
+                    <ListaAlunos />
+                </Card>
 
-            <Card
-                titulo="Com Parâmetro"
-                color="#ffc300"
-            >
-                <ComParametro
-                    titulo="Situação do Aluno"
-                    aluno="Pedro"
-                    nota={9.3}
-                />
-            </Card>
+                <Card
+                    titulo="#05 - Familia"
+                    color="#22223b"
+                >
+                    <Familia Sobrenome="Vidal">
+                        <FamiliaMembro Nome="Wallace" />
+                        <FamiliaMembro Nome="Andressa" />
+                        <FamiliaMembro Nome="Rafaela" Sobrenome="Rocha" />
+                    </Familia>
+                </Card>
 
-            <Card
-                titulo="Fragmento"
-                color="purple"
-            >
-                <Fragmento />
-            </Card>
+                <Card
+                    titulo="#04 - Desafio Aleatório"
+                    color="red"
+                >
+                    <Aleatorio
+                        max={10}
+                        min={5}
+                    />
+                </Card>
 
-            <Card
-                titulo="Com Parâmetro"
-                color="#8338ec"
-            >
-                <ComParametro
-                    titulo="Situação do Aluno"
-                    aluno="Pedro"
-                    nota={9.3}
-                />
-            </Card>
+                <Card
+                    titulo="#03 - Fragmento"
+                    color="purple"
+                >
+                    <Fragmento />
+                </Card>
 
-            <Card
-                titulo="Primeiro"
-                color="#023047"
-            >
-                <Primeiro />
-            </Card>
+                <Card
+                    titulo="#02 - Com Parâmetro"
+                    color="#8338ec"
+                >
+                    <ComParametro
+                        titulo="Situação do Aluno"
+                        aluno="Pedro"
+                        nota={9.3}
+                    />
+                </Card>
 
-        </Cards>
-    </div>
-);
+                <Card
+                    titulo="#01 - Primeiro"
+                    color="#023047"
+                >
+                    <Primeiro />
+                </Card>
+
+            </Cards>
+        </div>
+    )
+};
+
+export default App;

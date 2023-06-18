@@ -1,9 +1,10 @@
 import React from "react";
 
-export default props => {
+const FamiliaMembro = props => {
     return (
         <span>
             {props.Nome} <strong>{props.Sobrenome}</strong>
         </span>
     );
 }
+export default FamiliaMembro;

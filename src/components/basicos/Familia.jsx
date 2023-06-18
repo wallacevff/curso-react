@@ -1,6 +1,6 @@
 import React from "react";
 import "./Familia.css";
-export default props => {
+const Familia = props => {
     return (
         <div className="Familia">
             {/* {
@@ -15,7 +15,6 @@ export default props => {
                     (child, i) => {
                         
                         let sobrenome = typeof(child.props.Sobrenome) != "undefined" ? child.props.Sobrenome : props.Sobrenome;
-                        console.log(sobrenome);
                         return React.cloneElement(child, {Sobrenome: sobrenome, key: i});
                     }
                     
@@ -24,3 +23,5 @@ export default props => {
         </div>
     );
 }
+
+export default Familia;
