@@ -12,7 +12,8 @@ import {
     TabelaProdutos,
     ParOuImpar,
     UsuarioInfo,
-    DiretaPai
+    DiretaPai,
+    IndiretaPai
 } from "./importHelper";
 
 const App = () => {
@@ -24,6 +25,13 @@ const App = () => {
     return (
         <div id="app">
             <Cards>
+            <Card
+                    titulo="#10 - Comunicação Indireta"
+                    color="#8338ec"
+                    styles={styles.cartao}
+                >
+                    <IndiretaPai />
+                </Card>
                 <Card
                     titulo="#09 - Comunicação Direta"
                     color="#00b4d8"
