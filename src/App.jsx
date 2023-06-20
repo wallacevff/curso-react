@@ -11,7 +11,8 @@ import {
     ListaAlunos,
     TabelaProdutos,
     ParOuImpar,
-    UsuarioInfo
+    UsuarioInfo,
+    DiretaPai
 } from "./importHelper";
 
 const App = () => {
@@ -24,20 +25,11 @@ const App = () => {
         <div id="app">
             <Cards>
                 <Card
-                    titulo="#09 - Renderização Condicional"
-                    color="#fca311"
+                    titulo="#09 - Comunicação Direta"
+                    color="#00b4d8"
                     styles={styles.cartao}
                 >
-                    <UsuarioInfo
-                        usuario={{ nome: "Wallace" }}
-                    />
-                    <UsuarioInfo
-                        usuario={{ email: "wall@wallace.com" }}
-                    />
-                    <UsuarioInfo
-                        usuario={{ nome: "Frederico" }}
-                    />
-                    <UsuarioInfo />
+                    <DiretaPai />
                 </Card>
                 <Card
                     titulo="#08 - Renderização Condicional"
@@ -53,6 +45,16 @@ const App = () => {
                     <ParOuImpar
                         numero={190}
                     />
+                    <UsuarioInfo
+                        usuario={{ nome: "Wallace" }}
+                    />
+                    <UsuarioInfo
+                        usuario={{ email: "wall@wallace.com" }}
+                    />
+                    <UsuarioInfo
+                        usuario={{ nome: "Frederico" }}
+                    />
+                    <UsuarioInfo />
                 </Card>
                 <Card
                     titulo="#07 - Tabela Produtos"

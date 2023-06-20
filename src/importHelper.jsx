@@ -10,6 +10,7 @@ import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import ParOuImpar from "./components/condicional/ParOuImpar";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import DiretaPai from "./components/comunicacao/DiretaPai";
 export { Primeiro,
     ComParametro,
     Fragmento,
@@ -21,5 +22,6 @@ export { Primeiro,
     ListaAlunos,
     TabelaProdutos,
     ParOuImpar,
-    UsuarioInfo
+    UsuarioInfo,
+    DiretaPai
 };

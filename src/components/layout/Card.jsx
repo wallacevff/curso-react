@@ -3,13 +3,15 @@ import "./Card.css";
 
 const Card = props => {
     var children = undefined;
-    if (props.children.length) {
-        children = props.children.map(
-            (el, i) => React.cloneElement(el, { key: i, color: props.color })
-        );
-    }
-    else {
-        children = React.cloneElement(props.children, {color: props.color});
+    if (props.children) {
+        if (props.children.length) {
+            children = props.children.map(
+                (el, i) => React.cloneElement(el, { key: i, color: props.color })
+            );
+        }
+        else {
+            children = React.cloneElement(props.children, { color: props.color });
+        }
     }
     return (
         <div className="Card"
