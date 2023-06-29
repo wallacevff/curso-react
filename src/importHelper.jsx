@@ -13,6 +13,8 @@ import UsuarioInfo from "./components/condicional/UsuarioInfo";
 import DiretaPai from "./components/comunicacao/DiretaPai";
 import IndiretaPai from "./components/comunicacao/IndiretaPai";
 import Input from "./components/formulario/Input";
+import Contador from "./components/contador/Contador";
+
 export { Primeiro,
     ComParametro,
     Fragmento,
@@ -27,5 +29,6 @@ export { Primeiro,
     UsuarioInfo,
     DiretaPai,
     IndiretaPai,
-    Input
+    Input,
+    Contador
 };

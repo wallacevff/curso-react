@@ -14,7 +14,8 @@ import {
     UsuarioInfo,
     DiretaPai,
     IndiretaPai,
-    Input
+    Input,
+    Contador
 } from "./importHelper";
 
 const App = () => {
@@ -26,14 +27,24 @@ const App = () => {
     return (
         <div id="app">
             <Cards>
-            <Card
+                <Card
+                    titulo="#12 - Contador"
+                    color="#ffafcc"
+                    styles={styles.cartao}
+                >
+                    <Contador 
+                        numeroInicial={1}
+                        passo={15}
+                    />
+                </Card>
+                <Card
                     titulo="#11 - Componente Controlado"
                     color="#023047"
                     styles={styles.cartao}
                 >
                     <Input />
                 </Card>
-            <Card
+                <Card
                     titulo="#10 - Comunicação Indireta"
                     color="#8338ec"
                     styles={styles.cartao}
