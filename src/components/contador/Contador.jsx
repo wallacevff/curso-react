@@ -1,4 +1,8 @@
 import React from "react";
+import Display from "./Display";
+import Botoes from "./Botoes";
+import PassoForm from "./PassoForm";
+
 export default class Contador extends React.Component {
     // constructor(props){
     //     super(props);
@@ -9,7 +13,7 @@ export default class Contador extends React.Component {
 
     state = {
         numero: this.props.numeroInicial || 0,
-        passo: this.props.passo != undefined ? this.props.passo : 1
+        passo: this.props.passo !== undefined ? this.props.passo : 1
     }
     // constructor(props){
     //     super(props);
@@ -26,9 +30,9 @@ export default class Contador extends React.Component {
             numero: this.state.numero - this.state.passo
         });
     }
-    setPasso = (e) => {
+    setPasso = (novoPasso) => {
         this.setState({
-            passo: parseInt(e.target.value)
+            passo: parseInt(novoPasso)
         })
     }
     render() {
@@ -41,43 +45,15 @@ export default class Contador extends React.Component {
                 }
             }>
                 <h2>Contador</h2>
-                <p>Valor Inicial: {this.state.numero}</p>
-                <input
-                    id="passoInput"
-                    type="number"
-                    value={this.state.passo}
-                    onChange={this.setPasso}
+                <Display numero={this.state.numero} />
+                <PassoForm
+                    passo={this.state.passo}
+                    setPasso={this.setPasso}
                 />
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center"
-                    }}>
-                    <button
-                        className="btn btn-primary"
-                        onClick={this.inc}
-                        style={{
-                            marginTop: "10px",
-                            width: "40px",
-                            height: "40px",
-                            textAlign: "center",
-                            alignContent: "center",
-                            borderRadius: "100%"
-                        }}
-                    >+</button>
-                    <button
-                        className="btn btn-danger"
-                        onClick={this.dec}
-                        style={{
-                            marginTop: "10px",
-                            width: "40px",
-                            height: "40px",
-                            marginLeft: "10px",
-                            textAlign: "center",
-                            alignContent: "center",
-                            borderRadius: "100%"
-                        }}
-                    >-</button>
-                </div>
+                <Botoes
+                    setInc={this.inc}
+                    setDec={this.dec}
+                />
             </div>
         );
     }
