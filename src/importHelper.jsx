@@ -14,6 +14,7 @@ import DiretaPai from "./components/comunicacao/DiretaPai";
 import IndiretaPai from "./components/comunicacao/IndiretaPai";
 import Input from "./components/formulario/Input";
 import Contador from "./components/contador/Contador";
+import Mega from "./components/mega/Mega";
 
 export { Primeiro,
     ComParametro,
@@ -30,5 +31,6 @@ export { Primeiro,
     DiretaPai,
     IndiretaPai,
     Input,
-    Contador
+    Contador,
+    Mega
 };

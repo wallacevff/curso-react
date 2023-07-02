@@ -15,7 +15,8 @@ import {
     DiretaPai,
     IndiretaPai,
     Input,
-    Contador
+    Contador,
+    Mega
 } from "./importHelper";
 
 const App = () => {
@@ -27,6 +28,13 @@ const App = () => {
     return (
         <div id="app">
             <Cards>
+            <Card
+                    titulo="#13 - Mega"
+                    color="#264653"
+                    styles={styles.cartao}
+                >
+                    <Mega />
+                </Card>
                 <Card
                     titulo="#12 - Contador"
                     color="#ffafcc"
